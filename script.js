@@ -2,6 +2,7 @@ function createPopup(id) {
   let popupNode = document.querySelector(id);
   let overlay = popupNode.querySelector(".overlay");
   let closeBtn = popupNode.querySelector(".close-btn");
+  
   function openPopup() {
     popupNode.classList.add("active");
   }
@@ -14,3 +15,9 @@ function createPopup(id) {
 }
 let popup = createPopup("#popup");
 document.querySelector("#open-popup").addEventListener("click", popup);
+
+const close = document.getElementById("close")
+
+close.addEventListener("click", () => {
+    window.location.href = 'account.html';
+})
