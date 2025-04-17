@@ -125,7 +125,6 @@ input:focus {
   font-optical-sizing: auto;
   letter-spacing: 1px;
   text-decoration: none;
-
   opacity: 1;
 }
 .login-btn:hover {
@@ -138,7 +137,6 @@ input:focus {
   width: 70%;
   text-align: center;
 }
-
 .term-link {
   text-decoration: none;
   color: #9f84ff;
@@ -155,34 +153,104 @@ input:focus {
   font-size: 1.1rem;
 }
 
-.main-login {
+.account-login {
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 600;
   color: #aa13db;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.account-login:hover {
+  opacity: 0.9;
+  transition: top 500ms ease-in-out 500ms;
+}
+.popup {
+  transition: all ease-in-out 3s;
 }
 
 .popup .overlay {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  background-color: #060316;
   width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  opacity: 1;
-  transition: 0pacity 100ms ease-in-out 200ms;
+  opacity: 0;
   border-radius: 20px;
 }
 .popup .popup-content {
   position: absolute;
   top: 50%;
   left: 50%;
+  display: none;
   text-align: center;
-  background-color: #9f84ff;
-  transform: translate(-50%, -50%) scale(1.15 );
+  background-color: #060316;
+  transform: translate(-50%, -50%) scale(1.15);
+  opacity: 0;
+  padding: 2.25rem 0;
+  width: 80%;
+  border: 1px solid #aa13db;
+  border-radius: 20px;
 }
-.policy {
+.controls {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0px 0px 50px 35px;
+}
+.controls-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.close-btn {
+  font-size: 1.2rem;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.close-btn-new {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #aa13db;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.divide-plus-mail {
+  padding: 0 3.5rem;
+}
+.popup.active {
+  top: 0px;
+  transition: top 0ms ease-in-out 0ms;
+  transition: all ease-in-out 3s;
+}
+.popup.actve .overlay {
+  opacity: 1;
+
+}
+.popup.active .popup-content {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  display: block;
+  transition: all ease-in-out 3s;
+}
+.terms-new-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.terms-new {
+  font-size: 1rem;
+  font-weight: 100;
+  color: rgb(203, 203, 203);
+  width: 80%;
+}
+/* .policy {
   margin-top: 3rem;
   font-weight: 100;
   color: rgb(203, 203, 203);
-}
+} */
