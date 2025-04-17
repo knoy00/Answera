@@ -18,7 +18,7 @@ main {
 
 .path-svg {
   width: 95%;
-  filter: blur(100px);
+  filter: blur(80px);
 }
 .join-contents {
   position: absolute;
@@ -125,6 +125,11 @@ input:focus {
   font-optical-sizing: auto;
   letter-spacing: 1px;
   text-decoration: none;
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+
+>>>>>>> 75d22777234a02e6b0ce1b3a85fdd2594f7a5a6f
   opacity: 1;
 }
 .login-btn:hover {
