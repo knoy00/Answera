@@ -1,8 +1,8 @@
-import { auth } from './firebase.js';
+import { auth } from "./firebase.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  signOut
+  signOut,
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 
 // Sign up function
@@ -14,7 +14,7 @@ const signUp = async () => {
     if (passwordInput.length >= 6) {
       try {
         await createUserWithEmailAndPassword(auth, emailInput, passwordInput);
-        window.location.href = 'home.html';
+        window.location.href = "home.html";
       } catch (error) {
         alert(error.message);
       }
